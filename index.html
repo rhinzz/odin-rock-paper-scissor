@@ -9,9 +9,6 @@
 
 <body>
     <script>
-        let humanScore = 0;
-        let computerScore = 0;
-
         function getComputerChoice() {
             let choice = Math.floor(Math.random() * 3);
             switch (choice) {
@@ -30,32 +27,30 @@
 
         function getHumanChoice() {
             let input = prompt("Choose rock, paper, or scissor:");
-            input = input.toLowerCase();
-            return input;
+            if (input == "rock" || input == "paper" || input == "scissor") {
+                input = input.toLowerCase();
+                return input;
+            } else {
+                console.log("Invalid input!")
+            }
+
         }
         //console.log(getHumanChoice());
-        //console.log(humanChoice);
 
         function playRound(humanChoice, computerChoice) {
             if (humanChoice == "rock" && computerChoice == "paper") {
-                computerScore++;
-                console.log("You lose! Rock beats paper!");
+                console.log("You lose! Paper beats rock!");
             } else if (humanChoice == "rock" && computerChoice == "scissor") {
-                humanScore++;
                 console.log("You win! Rock beats scissor!");
             } else if (humanChoice == "paper" && computerChoice == "rock") {
-                humanScore++;
                 console.log("You win! Paper beats rock!");
             } else if (humanChoice == "paper" && computerChoice == "scissor") {
-                computerScore++;
                 console.log("You lose! Scissor beats paper!");
             } else if (humanChoice == "scissor" && computerChoice == "paper") {
-                humanScore++;
                 console.log("You win! Scissor beats paper!");
             } else if (humanChoice == "scissor" && computerChoice == "rock") {
-                computerScore++;
                 console.log("You lose! Rock beats scissor!");
-            } else if (humanChoice == computerChoice){
+            } else if (humanChoice == computerChoice) {
                 console.log("Tie!");
             }
         }
@@ -63,7 +58,6 @@
         const computerSelection = getComputerChoice();
 
         playRound(humanSelection, computerSelection);
-
     </script>
 </body>
 
