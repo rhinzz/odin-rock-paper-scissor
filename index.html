@@ -11,6 +11,7 @@
     <script>
         let humanScore = 0;
         let computerScore = 0;
+        let humanChoice = "";
 
         function getComputerChoice() {
             let choice = Math.floor(Math.random() * 3);
@@ -29,13 +30,25 @@
         // console.log(getComputerChoice());
         function getHumanChoice() {
             let input = prompt("Choose rock, paper, or scissor:");
+            input = input.toLowerCase();
             if (input === "rock" || input === "paper" || input === "scissor") {
+                humanChoice = input;
                 return input;
             } else {
                 return "Invalid Input!"
             }
         }
-        // console.log(getHumanChoice());
+        //console.log(getHumanChoice());
+        //console.log(humanChoice);
+
+        function playRound(humanChoice, computerChoice) {
+            if (condition) {
+                
+            } else {
+                
+            }
+        }
+
     </script>
 </body>
 
