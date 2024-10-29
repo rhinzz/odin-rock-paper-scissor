@@ -19,4 +19,4 @@ Project is created with:
 * Javascript
 
 ## Link
-TBD
+https://rhinzz.github.io/odin-rock-paper-scissor/
