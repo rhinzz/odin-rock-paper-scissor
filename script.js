@@ -27,20 +27,6 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
-    for (let index = 0; index < 5; index++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
-
-    if (humanScore > computerScore) {
-        console.log("Game finished!, Human : " + humanScore + ", Computer : " + computerScore + " , You Win!");
-    } else if (humanScore < computerScore) {
-        console.log("Game finished!, Human : " + humanScore + ", Computer : " + computerScore + " , You Lose!");
-    } else {
-        console.log("Game finished!, Human : " + humanScore + ", Computer : " + computerScore + " , It's a Tie!");
-    }
-
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == "paper" && computerChoice == "rock") {
             console.log("You win! Paper beats rock!");
