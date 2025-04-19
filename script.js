@@ -3,13 +3,10 @@ function getComputerChoice() {
     switch (choice) {
         case 0:
             return "rock";
-            break;
         case 1:
             return "paper";
-            break;
         case 2:
             return "scissor"
-            break;
     }
 }
 // console.log(getComputerChoice());
