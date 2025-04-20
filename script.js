@@ -8,6 +8,9 @@ buttons.forEach(button => {
     });
 })
 
+const resultContainer = document.querySelector("#resultContainer");
+const result = document.querySelector("#result");
+
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
     switch (choice) {
@@ -23,18 +26,18 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == "paper" && computerChoice == "rock") {
-        console.log("You win! Paper beats rock!");
+        result.innerText = "You win! Paper beats rock!";
     } else if (humanChoice == "rock" && computerChoice == "paper") {
-        console.log("You lose! Paper beats rock!");
+        result.innerText = "You lose! Paper beats rock!";
     } else if (humanChoice == "rock" && computerChoice == "scissor") {
-        console.log("You win! Rock beats scissor!");
+        result.innerText = "You win! Rock beats scissor!";
     } else if (humanChoice == "scissor" && computerChoice == "rock") {
-        console.log("You lose! Rock beats scissor!");
+        result.innerText = "You lose! Rock beats scissor!";
     } else if (humanChoice == "scissor" && computerChoice == "paper") {
-        console.log("You win! Scissor beats paper!");
+        result.innerText = "You win! Scissor beats paper!";
     } else if (humanChoice == "paper" && computerChoice == "scissor") {
-        console.log("You lose! Scissor beats paper!");
+        result.innerText = "You lose! Scissor beats paper!";
     } else {
-        console.log("Tie!");
+        result.innerText = "Tie!";
     }
 }
