@@ -2,11 +2,9 @@ let buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
-        let userChoice = button.value;
+        let playerSelection = button.value;
         let computerChoice = getComputerChoice();
-        //console.log("Human: " + userChoice);
-        //console.log("Bot: "+ computerChoice);
-        playRound(userChoice, computerChoice);        
+        playRound(playerSelection, computerChoice);        
     });
 })
 
