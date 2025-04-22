@@ -1,7 +1,10 @@
 let humanScore = 0;
 let computerScore = 0;
+const result = document.querySelector("#result");
+const win = document.createElement("p");
 
-let buttons = document.querySelectorAll('button');
+
+const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
@@ -10,6 +13,21 @@ buttons.forEach(button => {
 
         playRound(playerSelection, computerChoice);
     });
+})
+
+const restartGame = document.querySelector("#restart");
+restartGame.addEventListener('click', () => {
+    humanScore = 0;
+    computerScore = 0;
+
+    document.querySelector('#human').innerText = `0`;
+    document.querySelector('#computer').innerText = `0`;
+    result.innerText = "";
+    win.remove();
+
+    buttons.forEach(button => button.disabled = false);
+
+    document.querySelector("#restartButton").remove();
 })
 
 function getComputerChoice() {
@@ -25,8 +43,6 @@ function getComputerChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    const result = document.querySelector("#result");
-
     if (humanChoice == "paper" && computerChoice == "rock") {
         result.innerText = "You win! Paper beats rock!";
         humanScore++;
@@ -54,7 +70,9 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanScore == 5 || computerScore == 5) {
         buttons.forEach(button => button.disabled = true);
-        const win = document.createElement("p");
+        const restart = document.createElement("button");
+        restart.setAttribute("id", "restartButton");
+        restart.innerText = "Restart";
 
         if (humanScore == 5) {
             win.innerHTML = "You win!";
@@ -63,5 +81,6 @@ function playRound(humanChoice, computerChoice) {
         }
 
         document.querySelector("#resultContainer").appendChild(win);
+        document.querySelector("#restart").appendChild(restart);
     }
 }
