@@ -1,14 +1,16 @@
+let humanScore = 0;
+let computerScore = 0;
+
 let buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
         let playerSelection = button.value;
         let computerChoice = getComputerChoice();
-        playRound(playerSelection, computerChoice);        
+
+        playRound(playerSelection, computerChoice);
     });
 })
-
-const result = document.querySelector("#result");
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
@@ -22,10 +24,9 @@ function getComputerChoice() {
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
 function playRound(humanChoice, computerChoice) {
+    const result = document.querySelector("#result");
+
     if (humanChoice == "paper" && computerChoice == "rock") {
         result.innerText = "You win! Paper beats rock!";
         humanScore++;
@@ -50,4 +51,17 @@ function playRound(humanChoice, computerChoice) {
 
     document.querySelector('#human').innerText = `${humanScore}`;
     document.querySelector('#computer').innerText = `${computerScore}`;
+
+    if (humanScore == 5 || computerScore == 5) {
+        buttons.forEach(button => button.disabled = true);
+        const win = document.createElement("p");
+
+        if (humanScore == 5) {
+            win.innerHTML = "You win!";
+        } else {
+            win.innerHTML = "You lose!";
+        }
+
+        document.querySelector("#resultContainer").appendChild(win);
+    }
 }
