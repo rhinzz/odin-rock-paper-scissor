@@ -19,7 +19,6 @@ const restartGame = document.querySelector("#restart");
 restartGame.addEventListener('click', () => {
     humanScore = 0;
     computerScore = 0;
-
     document.querySelector('#human').innerText = `0`;
     document.querySelector('#computer').innerText = `0`;
     result.innerText = "";
