@@ -29,7 +29,12 @@ body {
     border-radius: 16px;
     box-shadow: 10px 10px 25px 0px rgba(155, 155, 155, 0.5);
     width: fit-content;
-    padding: 2rem;
+    margin: 1rem;
+    padding: 3rem;
+
+    @include mobile {
+        padding: 1.25rem;
+    }
 
     h1 {
         font-size: 1.75rem;
@@ -45,6 +50,7 @@ body {
     .buttonContainer {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 0.5rem;
         margin: 1.5rem 0;
         width: 100%;
@@ -90,11 +96,26 @@ body {
     }
 
     .scoreContainer {
-        font-size: 0.875rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        @include mobile {
+            font-size: 0.875rem;
+        }
+
+        .scoreWrapper{
+            display: flex;
+            justify-content: space-around;
+
+            p{
+                margin: 0.5rem 0;
+            }
+        }
 
         .winStyle {
             font-size: 1.5rem;
             font-weight: 600;
+            margin: 1rem 0;
             text-align: center;
 
             @include mobile {

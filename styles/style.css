@@ -24,7 +24,13 @@ body {
   box-shadow: 10px 10px 25px 0px rgba(155, 155, 155, 0.5);
   width: -moz-fit-content;
   width: fit-content;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 3rem;
+}
+@media screen and (max-width: 480px) {
+  .gameContainer {
+    padding: 1.25rem;
+  }
 }
 .gameContainer h1 {
   font-size: 1.75rem;
@@ -40,6 +46,7 @@ body {
 .gameContainer .buttonContainer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin: 1.5rem 0;
   width: 100%;
@@ -80,11 +87,25 @@ body {
   padding: 0.5rem 1rem;
 }
 .gameContainer .scoreContainer {
-  font-size: 0.875rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 480px) {
+  .gameContainer .scoreContainer {
+    font-size: 0.875rem;
+  }
+}
+.gameContainer .scoreContainer .scoreWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.gameContainer .scoreContainer .scoreWrapper p {
+  margin: 0.5rem 0;
 }
 .gameContainer .scoreContainer .winStyle {
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 1rem 0;
   text-align: center;
 }
 @media screen and (max-width: 480px) {
