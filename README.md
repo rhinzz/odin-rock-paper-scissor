@@ -8,15 +8,16 @@ The Odin Project assignment to create rock paper scissor game using javascript p
 * [Link](#link)
 
 ## Screenshot
-![output-image](./output.png)
+![output-image](./ui_output.jpeg)
 
 ## General info
-This is an exercise from The Odin Project to create simple rock paper scissor game using HTML and Javascript. Javascript was originally designed as a scripting language for websites but became widely adopted as a general-purpose programming language, and is currently the most popular programming language in use. *(Source: https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages)*
+This is an exercise from The Odin Project to create simple rock paper scissor game using HTML, Javascript, and SCSS. Javascript was originally designed as a scripting language for websites but became widely adopted as a general-purpose programming language, and is currently the most popular programming language in use. *(Source: https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages)*
 
 ## Technologies
 Project is created with:
 * HTML
 * Javascript
+* SCSS
 
 ## Link
 https://rhinzz.github.io/odin-rock-paper-scissor/
