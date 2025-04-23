@@ -61,4 +61,8 @@ body {
   border-radius: 0.5rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
+}
+.gameContainer .scoreContainer .winStyle {
+  font-weight: 600;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

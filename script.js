@@ -2,6 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 const result = document.querySelector("#result");
 const win = document.createElement("p");
+win.className = "winStyle";
 
 
 const buttons = document.querySelectorAll('button');
