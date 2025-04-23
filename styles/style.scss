@@ -1,3 +1,71 @@
-body{
+html {
+    height: 100%;
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
     background-color: #e6e6e6;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.gameContainer {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 10px 10px 25px 0px rgba(155, 155, 155, 0.5);
+    width: fit-content;
+    padding: 2rem;
+
+    h1 {
+        text-align: right;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+        width: 100%;
+
+        button {
+            border: none;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            padding: 2rem;
+
+            &:hover {
+                box-shadow: 10px 10px 25px 0px rgba(170, 170, 170, 0.5);
+            }
+        }
+    }
+
+    .resultContainer {
+        text-align: center;
+
+        p {
+            font-weight: 600;
+        }
+    }
+
+    .restartContainer {
+        text-align: center;
+
+        button {
+            border: 0.75px solid black;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+    }
 }

@@ -15,13 +15,13 @@ buttons.forEach(button => {
     });
 })
 
-const restartGame = document.querySelector("#restart");
+const restartGame = document.querySelector(".restartContainer");
 restartGame.addEventListener('click', () => {
     humanScore = 0;
     computerScore = 0;
     document.querySelector('#human').innerText = `0`;
     document.querySelector('#computer').innerText = `0`;
-    result.innerText = "";
+    result.innerText = "Choose to Start";
     win.remove();
 
     buttons.forEach(button => button.disabled = false);
@@ -69,17 +69,18 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanScore == 5 || computerScore == 5) {
         buttons.forEach(button => button.disabled = true);
+
+        if (humanScore == 5) {
+            win.innerHTML = "You win the game!";
+        } else {
+            win.innerHTML = "You lose the game!";
+        }
+
         const restart = document.createElement("button");
         restart.setAttribute("id", "restartButton");
         restart.innerText = "Restart";
 
-        if (humanScore == 5) {
-            win.innerHTML = "You win!";
-        } else {
-            win.innerHTML = "You lose!";
-        }
-
-        document.querySelector("#resultContainer").appendChild(win);
-        document.querySelector("#restart").appendChild(restart);
+        document.querySelector(".scoreContainer").appendChild(win);
+        document.querySelector(".restartContainer").appendChild(restart);
     }
 }

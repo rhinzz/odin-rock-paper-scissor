@@ -4,20 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="script.js" defer></script> 
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <script src="script.js" defer></script>
     <title>Odin Rock Paper Scissor</title>
 </head>
 
 <body>
-    <div id="resultContainer">
-        <p>Human: <span id="human">0</span></p>
-        <p>Bot: <span id="computer">0</span></p>
-        <p>Result: <span id="result"></span></p>
-    </div>
-    <button value="rock">Rock</button>
-    <button value="paper">Paper</button>
-    <button value="scissor">Scissor</button>
-    <div id="restart"></div>
+    <section class="gameContainer">
+        <h1>rock, paper, scissor</h1>
+        <hr>
+        <div class="buttonContainer">
+            <button value="rock">🪨</button>
+            <button value="paper">📃</button>
+            <button value="scissor">✂️</button>
+        </div>
+        <div class="resultContainer">
+            <p><span id="result">Choose to start</span></p>
+        </div>
+        <div class="scoreContainer">
+            <p>Human: <span id="human">0</span></p>
+            <p>Bot: <span id="computer">0</span></p>
+        </div>
+        <div class="restartContainer"></div>
+    </section>
 </body>
 
 </html>
