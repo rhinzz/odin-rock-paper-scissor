@@ -27,9 +27,15 @@ body {
   padding: 2rem;
 }
 .gameContainer h1 {
-  text-align: right;
+  font-size: 1.75rem;
   font-weight: 600;
   margin: 0;
+  text-align: right;
+}
+@media screen and (max-width: 480px) {
+  .gameContainer h1 {
+    font-size: 1.35rem;
+  }
 }
 .gameContainer .buttonContainer {
   display: flex;
@@ -47,11 +53,22 @@ body {
 .gameContainer .buttonContainer button:hover {
   box-shadow: 10px 10px 25px 0px rgba(170, 170, 170, 0.5);
 }
+@media screen and (max-width: 480px) {
+  .gameContainer .buttonContainer button {
+    font-size: 1.75rem;
+    padding: 1.5rem;
+  }
+}
 .gameContainer .resultContainer {
   text-align: center;
 }
 .gameContainer .resultContainer p {
   font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .gameContainer .resultContainer p {
+    font-size: 0.875rem;
+  }
 }
 .gameContainer .restartContainer {
   text-align: center;
@@ -62,7 +79,16 @@ body {
   font-weight: 500;
   padding: 0.5rem 1rem;
 }
+.gameContainer .scoreContainer {
+  font-size: 0.875rem;
+}
 .gameContainer .scoreContainer .winStyle {
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .gameContainer .scoreContainer .winStyle {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */

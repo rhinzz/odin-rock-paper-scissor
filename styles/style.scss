@@ -1,3 +1,9 @@
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
 html {
     height: 100%;
 }
@@ -26,9 +32,14 @@ body {
     padding: 2rem;
 
     h1 {
-        text-align: right;
+        font-size: 1.75rem;
         font-weight: 600;
         margin: 0;
+        text-align: right;
+
+        @include mobile {
+            font-size: 1.35rem;
+        }
     }
 
     .buttonContainer {
@@ -47,6 +58,11 @@ body {
             &:hover {
                 box-shadow: 10px 10px 25px 0px rgba(170, 170, 170, 0.5);
             }
+
+            @include mobile {
+                font-size: 1.75rem;
+                padding: 1.5rem;
+            }
         }
     }
 
@@ -55,6 +71,10 @@ body {
 
         p {
             font-weight: 600;
+
+            @include mobile {
+                font-size: 0.875rem;
+            }
         }
     }
 
@@ -69,10 +89,17 @@ body {
         }
     }
 
-    .scoreContainer{
-        .winStyle{
+    .scoreContainer {
+        font-size: 0.875rem;
+
+        .winStyle {
+            font-size: 1.5rem;
             font-weight: 600;
             text-align: center;
+
+            @include mobile {
+                font-size: 1rem;
+            }
         }
     }
 }

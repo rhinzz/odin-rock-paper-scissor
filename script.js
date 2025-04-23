@@ -72,9 +72,9 @@ function playRound(humanChoice, computerChoice) {
         buttons.forEach(button => button.disabled = true);
 
         if (humanScore == 5) {
-            win.innerHTML = "You win the game!";
+            win.innerHTML = "You win the game! 🎉";
         } else {
-            win.innerHTML = "You lose the game!";
+            win.innerHTML = "You lose the game! Try again. 😔";
         }
 
         const restart = document.createElement("button");
