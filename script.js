@@ -10,9 +10,8 @@ buttons.forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
         let playerSelection = button.value;
-        let computerChoice = getComputerChoice();
 
-        playRound(playerSelection, computerChoice);
+        playRound(playerSelection, getComputerChoice());
     });
 })
 
@@ -30,7 +29,7 @@ restartGame.addEventListener('click', () => {
     document.querySelector("#restartButton").remove();
 })
 
-function getComputerChoice() {
+const getComputerChoice = function() {
     let choice = Math.floor(Math.random() * 3);
     switch (choice) {
         case 0:
